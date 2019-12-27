@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		9101C37223AA8246006E8DAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C37123AA8246006E8DAA /* AppDelegate.swift */; };
 		9101C37423AA8246006E8DAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C37323AA8246006E8DAA /* SceneDelegate.swift */; };
-		9101C37623AA8246006E8DAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C37523AA8246006E8DAA /* ViewController.swift */; };
 		9101C37923AA8246006E8DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9101C37723AA8246006E8DAA /* Main.storyboard */; };
 		9101C37C23AA8246006E8DAA /* MyResearchApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9101C37A23AA8246006E8DAA /* MyResearchApp.xcdatamodeld */; };
 		9101C37E23AA8248006E8DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9101C37D23AA8248006E8DAA /* Assets.xcassets */; };
 		9101C38123AA8248006E8DAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9101C37F23AA8248006E8DAA /* LaunchScreen.storyboard */; };
 		9101C38C23AA8248006E8DAA /* MyResearchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C38B23AA8248006E8DAA /* MyResearchAppTests.swift */; };
 		9101C39723AA8248006E8DAA /* MyResearchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C39623AA8248006E8DAA /* MyResearchAppUITests.swift */; };
+		9101C3A623AAB54F006E8DAA /* Example1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C3A523AAB54F006E8DAA /* Example1TableViewController.swift */; };
+		9102C0BC23ABCBB100188736 /* UIVIewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9102C0BB23ABCBB100188736 /* UIVIewExtension.swift */; };
+		9105D7AE23AACC0400B4390B /* Example1TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9105D7AD23AACC0400B4390B /* Example1TableHeaderView.xib */; };
+		9105D7B023AACC1A00B4390B /* Example1TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105D7AF23AACC1A00B4390B /* Example1TableHeaderView.swift */; };
+		917D0F0B23AD334F00769A03 /* VCWithTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9101C36E23AA8246006E8DAA /* MyResearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9101C36E23AA8246006E8DAA /* MRA With Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MRA With Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9101C37123AA8246006E8DAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9101C37323AA8246006E8DAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9101C37523AA8246006E8DAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9101C37823AA8246006E8DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9101C37B23AA8246006E8DAA /* MyResearchApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyResearchApp.xcdatamodel; sourceTree = "<group>"; };
 		9101C37D23AA8248006E8DAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,11 @@
 		9101C39223AA8248006E8DAA /* MyResearchAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyResearchAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9101C39623AA8248006E8DAA /* MyResearchAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResearchAppUITests.swift; sourceTree = "<group>"; };
 		9101C39823AA8248006E8DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9101C3A523AAB54F006E8DAA /* Example1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1TableViewController.swift; sourceTree = "<group>"; };
+		9102C0BB23ABCBB100188736 /* UIVIewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewExtension.swift; sourceTree = "<group>"; };
+		9105D7AD23AACC0400B4390B /* Example1TableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Example1TableHeaderView.xib; sourceTree = "<group>"; };
+		9105D7AF23AACC1A00B4390B /* Example1TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1TableHeaderView.swift; sourceTree = "<group>"; };
+		917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +99,7 @@
 		9101C36F23AA8246006E8DAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9101C36E23AA8246006E8DAA /* MyResearchApp.app */,
+				9101C36E23AA8246006E8DAA /* MRA With Storyboard.app */,
 				9101C38723AA8248006E8DAA /* MyResearchAppTests.xctest */,
 				9101C39223AA8248006E8DAA /* MyResearchAppUITests.xctest */,
 			);
@@ -101,9 +109,11 @@
 		9101C37023AA8246006E8DAA /* MyResearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				9102C0BA23ABCBA300188736 /* Extension */,
+				9101C3A423AAB52E006E8DAA /* ViewControllers */,
+				9105D7AC23AACBE500B4390B /* Views */,
 				9101C37123AA8246006E8DAA /* AppDelegate.swift */,
 				9101C37323AA8246006E8DAA /* SceneDelegate.swift */,
-				9101C37523AA8246006E8DAA /* ViewController.swift */,
 				9101C37723AA8246006E8DAA /* Main.storyboard */,
 				9101C37D23AA8248006E8DAA /* Assets.xcassets */,
 				9101C37F23AA8248006E8DAA /* LaunchScreen.storyboard */,
@@ -131,6 +141,32 @@
 			path = MyResearchAppUITests;
 			sourceTree = "<group>";
 		};
+		9101C3A423AAB52E006E8DAA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9101C3A523AAB54F006E8DAA /* Example1TableViewController.swift */,
+				917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9102C0BA23ABCBA300188736 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9102C0BB23ABCBB100188736 /* UIVIewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9105D7AC23AACBE500B4390B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9105D7AD23AACC0400B4390B /* Example1TableHeaderView.xib */,
+				9105D7AF23AACC1A00B4390B /* Example1TableHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,7 +184,7 @@
 			);
 			name = MyResearchApp;
 			productName = MyResearchApp;
-			productReference = 9101C36E23AA8246006E8DAA /* MyResearchApp.app */;
+			productReference = 9101C36E23AA8246006E8DAA /* MRA With Storyboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9101C38623AA8248006E8DAA /* MyResearchAppTests */ = {
@@ -236,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9101C38123AA8248006E8DAA /* LaunchScreen.storyboard in Resources */,
+				9105D7AE23AACC0400B4390B /* Example1TableHeaderView.xib in Resources */,
 				9101C37E23AA8248006E8DAA /* Assets.xcassets in Resources */,
 				9101C37923AA8246006E8DAA /* Main.storyboard in Resources */,
 			);
@@ -262,7 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9101C37623AA8246006E8DAA /* ViewController.swift in Sources */,
+				9102C0BC23ABCBB100188736 /* UIVIewExtension.swift in Sources */,
+				917D0F0B23AD334F00769A03 /* VCWithTableViewController.swift in Sources */,
+				9101C3A623AAB54F006E8DAA /* Example1TableViewController.swift in Sources */,
+				9105D7B023AACC1A00B4390B /* Example1TableHeaderView.swift in Sources */,
 				9101C37223AA8246006E8DAA /* AppDelegate.swift in Sources */,
 				9101C37C23AA8246006E8DAA /* MyResearchApp.xcdatamodeld in Sources */,
 				9101C37423AA8246006E8DAA /* SceneDelegate.swift in Sources */,
@@ -446,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pe.edu.upc.MyResearchApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MRA With Storyboard";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +504,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pe.edu.upc.MyResearchApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MRA With Storyboard";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
