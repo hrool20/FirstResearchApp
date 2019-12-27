@@ -19,11 +19,15 @@ class Example1TableViewController: UITableViewController {
     super.viewDidLoad()
     
     navigationItem.title = "First View Controller"
+    let bookmarks = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
+    bookmarks.tintColor = UIColor(named: "FirstColor")
     navigationItem.setLeftBarButtonItems([
-      UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
+      bookmarks
     ], animated: true)
+    let play = UIBarButtonItem(barButtonSystemItem: .play, target: nil, action: nil)
+    play.tintColor = UIColor(named: "FirstColor")
     navigationItem.setRightBarButtonItems([
-      UIBarButtonItem(barButtonSystemItem: .play, target: nil, action: nil)
+      play
     ], animated: true)
     
     array = []
@@ -51,6 +55,12 @@ class Example1TableViewController: UITableViewController {
     for i in 0..<30 {
       array.append(("Title \(i + 1)", "Description \(i + 1)"))
     }
+  }
+  
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    
+    secondNavigationBar.frame.size = CGSize(width: UIScreen.main.bounds.width, height: (UIDevice.current.orientation == .portrait) ? 64.0 : 30.0)
   }
   
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {

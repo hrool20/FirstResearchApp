@@ -24,11 +24,16 @@ class Example1TableHeaderView: UIView {
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    self.posterView.backgroundColor = .red
-    self.posterImageView.backgroundColor = .purple
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
       self.posterImage = #imageLiteral(resourceName: "liger_background.jpg")
     }
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    posterView.backgroundColor = .red
+    posterImageView.backgroundColor = .purple
   }
   
     /*
