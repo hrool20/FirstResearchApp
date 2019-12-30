@@ -121,6 +121,10 @@ class Example1TableViewController: UITableViewController {
     switch indexPath.row {
     case 0:
       performSegue(withIdentifier: "showSecondTableView", sender: nil)
+    case 1:
+      performSegue(withIdentifier: "showSegmentedControlWithTableView", sender: nil)
+    case 2:
+      performSegue(withIdentifier: "showSegmentedControlWithViewController", sender: nil)
     default:
       break
     }
