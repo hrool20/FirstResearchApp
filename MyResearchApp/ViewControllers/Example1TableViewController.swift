@@ -10,7 +10,7 @@ import UIKit
 
 class Example1TableViewController: UITableViewController {
   
-  private var array: [(title: String, description: String)]!
+  private var array: [String]!
   private var headerView: Example1TableHeaderView!
   private var imageHeight: CGFloat!
   private var secondNavigationBar: UIView!
@@ -20,12 +20,12 @@ class Example1TableViewController: UITableViewController {
     
     navigationItem.title = "First View Controller"
     let bookmarks = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
-    bookmarks.tintColor = UIColor(named: "FirstColor")
+    bookmarks.tintColor = UIColor(named: "SecondColor")
     navigationItem.setLeftBarButtonItems([
       bookmarks
     ], animated: true)
     let play = UIBarButtonItem(barButtonSystemItem: .play, target: nil, action: nil)
-    play.tintColor = UIColor(named: "FirstColor")
+    play.tintColor = UIColor(named: "SecondColor")
     navigationItem.setRightBarButtonItems([
       play
     ], animated: true)
@@ -43,17 +43,22 @@ class Example1TableViewController: UITableViewController {
     secondNavigationBar.isHidden = true
     view.addSubview(secondNavigationBar)
     
-    tableView.contentInsetAdjustmentBehavior = .never
     headerView = Example1TableHeaderView.get(owner: self)
     headerView.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: imageHeight))
     let view = UIView(frame: headerView.frame)
     view.addSubview(headerView)
+    tableView.contentInsetAdjustmentBehavior = .never
     tableView.tableHeaderView = view
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     tableView.tableFooterView = UIView()
     
-    for i in 0..<30 {
-      array.append(("Title \(i + 1)", "Description \(i + 1)"))
+    array.append(contentsOf: [
+      "TableView without TableViewController",
+      "Segment Control inside TableView",
+      "Segment Control with ViewController"
+    ])
+    for i in 0..<20 {
+      array.append("Title \(i + 1)")
     }
   }
   
@@ -107,9 +112,20 @@ class Example1TableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as UITableViewCell
     
-    cell.textLabel?.text = array[indexPath.row].title
+    cell.textLabel?.text = array[indexPath.row]
     
     return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    switch indexPath.row {
+    case 0:
+      performSegue(withIdentifier: "showSecondTableView", sender: nil)
+    default:
+      break
+    }
+    
+    tableView.deselectRow(at: indexPath, animated: true)
   }
   
   // MARK: - Navigation
