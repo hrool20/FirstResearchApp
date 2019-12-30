@@ -60,7 +60,7 @@ class Example1TableViewController: UITableViewController {
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
     
-    secondNavigationBar.frame.size = CGSize(width: UIScreen.main.bounds.width, height: (UIDevice.current.orientation == .portrait) ? 64.0 : 30.0)
+    secondNavigationBar.frame.size = CGSize(width: UIScreen.main.bounds.width, height: (UIDevice.current.orientation == .portrait) ? 64.0 : 32.0)
   }
   
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
