@@ -23,6 +23,7 @@ class FirstSegmentedControl: UIView {
   weak var delegate: FirstSegmentedControlDelegate?
   private var buttons: [UIButton]!
   private var _selectedIndex: Int!
+  private var animated: Bool!
   var selectedIndex: Int {
     return _selectedIndex
   }
@@ -44,6 +45,7 @@ class FirstSegmentedControl: UIView {
     
     buttons = []
     _selectedIndex = 0
+    animated = true
     tabs = []
     textColor = .label
     selectedTextColor = UIColor(named: "FirstColor") ?? .red
@@ -52,7 +54,7 @@ class FirstSegmentedControl: UIView {
     self.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: firstView.bounds.height))
   }
   
-  func createTabs() {
+  private func createTabs() {
     buttons.removeAll()
     
     firstStackView.subviews.forEach { (view) in
@@ -64,7 +66,7 @@ class FirstSegmentedControl: UIView {
       button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
       button.setTitleColor(textColor, for: .normal)
       button.setTitle(tab, for: .normal)
-      button.addTarget(self, action: #selector(didShowTabContent(sender:animated:)), for: .touchUpInside)
+      button.addTarget(self, action: #selector(didShowTabContent(sender:)), for: .touchUpInside)
       buttons.append(button)
       firstStackView.addArrangedSubview(button)
     }
@@ -73,12 +75,17 @@ class FirstSegmentedControl: UIView {
     updateSelectorViewSize()
   }
   
-  func updateSelectorViewSize() {
+  private func updateSelectorViewSize() {
     selectorViewWidthConstraint.priority = tabs.count > 1 ? .required : .defaultLow
     selectorViewWidthConstraint.constant = bounds.width / CGFloat(tabs.count)
   }
   
-  @objc func didShowTabContent(sender: UIButton, animated: Bool = true) {
+  @objc private func didShowTabContent(sender: UIButton) {
+    animated = true
+    showTabContent(sender: sender)
+  }
+  
+  private func showTabContent(sender: UIButton) {
     var selectorViewPosition: CGFloat = selectorViewToSuperviewLeadingConstraint.constant
     
     for (index, button) in buttons.enumerated() {
@@ -101,8 +108,8 @@ class FirstSegmentedControl: UIView {
     guard buttons.count > index else {
       fatalError("Index has to be lower than the number of buttons.")
     }
-    
-    didShowTabContent(sender: buttons[index], animated: animated)
+    self.animated = animated
+    showTabContent(sender: buttons[index])
   }
   
   /*
