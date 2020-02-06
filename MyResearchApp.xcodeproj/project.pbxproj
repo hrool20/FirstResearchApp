@@ -17,14 +17,18 @@
 		9101C39723AA8248006E8DAA /* MyResearchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C39623AA8248006E8DAA /* MyResearchAppUITests.swift */; };
 		9101C3A623AAB54F006E8DAA /* Example1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101C3A523AAB54F006E8DAA /* Example1TableViewController.swift */; };
 		9102C0BC23ABCBB100188736 /* UIVIewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9102C0BB23ABCBB100188736 /* UIVIewExtension.swift */; };
+		910504F323BFBC63001D5613 /* SecondSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910504F223BFBC63001D5613 /* SecondSegmentedControl.xib */; };
+		910504F523BFBD7B001D5613 /* SecondSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910504F423BFBD7B001D5613 /* SecondSegmentedControl.swift */; };
 		9105D7AE23AACC0400B4390B /* Example1TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9105D7AD23AACC0400B4390B /* Example1TableHeaderView.xib */; };
 		9105D7B023AACC1A00B4390B /* Example1TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105D7AF23AACC1A00B4390B /* Example1TableHeaderView.swift */; };
+		912E0E6D23BE9F3E00AAD413 /* SegmentedControlWithTableViewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E0E6C23BE9F3E00AAD413 /* SegmentedControlWithTableViewCollectionViewController.swift */; };
 		9141A3CB23BA424C00526C26 /* FirstSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9141A3CA23BA424C00526C26 /* FirstSegmentedControl.xib */; };
 		9141A3CF23BA49E100526C26 /* FirstSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141A3CE23BA49E100526C26 /* FirstSegmentedControl.swift */; };
 		9141A3D123BA520800526C26 /* SegmentedControlWithTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141A3D023BA520800526C26 /* SegmentedControlWithTableViewController.swift */; };
 		915F49F523B665EF004C1843 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915F49F423B665EF004C1843 /* Colors.xcassets */; };
 		915F49F723B667F5004C1843 /* ParallaxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F49F623B667F5004C1843 /* ParallaxExtension.swift */; };
 		917D0F0B23AD334F00769A03 /* VCWithTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */; };
+		918BF24C23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BF24B23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,14 +65,18 @@
 		9101C39823AA8248006E8DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9101C3A523AAB54F006E8DAA /* Example1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1TableViewController.swift; sourceTree = "<group>"; };
 		9102C0BB23ABCBB100188736 /* UIVIewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewExtension.swift; sourceTree = "<group>"; };
+		910504F223BFBC63001D5613 /* SecondSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSegmentedControl.xib; sourceTree = "<group>"; };
+		910504F423BFBD7B001D5613 /* SecondSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentedControl.swift; sourceTree = "<group>"; };
 		9105D7AD23AACC0400B4390B /* Example1TableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Example1TableHeaderView.xib; sourceTree = "<group>"; };
 		9105D7AF23AACC1A00B4390B /* Example1TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1TableHeaderView.swift; sourceTree = "<group>"; };
+		912E0E6C23BE9F3E00AAD413 /* SegmentedControlWithTableViewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlWithTableViewCollectionViewController.swift; sourceTree = "<group>"; };
 		9141A3CA23BA424C00526C26 /* FirstSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSegmentedControl.xib; sourceTree = "<group>"; };
 		9141A3CE23BA49E100526C26 /* FirstSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSegmentedControl.swift; sourceTree = "<group>"; };
 		9141A3D023BA520800526C26 /* SegmentedControlWithTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlWithTableViewController.swift; sourceTree = "<group>"; };
 		915F49F423B665EF004C1843 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		915F49F623B667F5004C1843 /* ParallaxExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxExtension.swift; sourceTree = "<group>"; };
 		917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithTableViewController.swift; sourceTree = "<group>"; };
+		918BF24B23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlWithTableViewCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,8 @@
 				9101C3A523AAB54F006E8DAA /* Example1TableViewController.swift */,
 				917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */,
 				9141A3D023BA520800526C26 /* SegmentedControlWithTableViewController.swift */,
+				912E0E6C23BE9F3E00AAD413 /* SegmentedControlWithTableViewCollectionViewController.swift */,
+				918BF24B23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +188,8 @@
 				9105D7AF23AACC1A00B4390B /* Example1TableHeaderView.swift */,
 				9141A3CA23BA424C00526C26 /* FirstSegmentedControl.xib */,
 				9141A3CE23BA49E100526C26 /* FirstSegmentedControl.swift */,
+				910504F223BFBC63001D5613 /* SecondSegmentedControl.xib */,
+				910504F423BFBD7B001D5613 /* SecondSegmentedControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +304,7 @@
 				9141A3CB23BA424C00526C26 /* FirstSegmentedControl.xib in Resources */,
 				9101C37E23AA8248006E8DAA /* Assets.xcassets in Resources */,
 				9101C37923AA8246006E8DAA /* Main.storyboard in Resources */,
+				910504F323BFBC63001D5613 /* SecondSegmentedControl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,9 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910504F523BFBD7B001D5613 /* SecondSegmentedControl.swift in Sources */,
 				9102C0BC23ABCBB100188736 /* UIVIewExtension.swift in Sources */,
+				912E0E6D23BE9F3E00AAD413 /* SegmentedControlWithTableViewCollectionViewController.swift in Sources */,
 				917D0F0B23AD334F00769A03 /* VCWithTableViewController.swift in Sources */,
 				9141A3D123BA520800526C26 /* SegmentedControlWithTableViewController.swift in Sources */,
+				918BF24C23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift in Sources */,
 				9101C3A623AAB54F006E8DAA /* Example1TableViewController.swift in Sources */,
 				9105D7B023AACC1A00B4390B /* Example1TableHeaderView.swift in Sources */,
 				915F49F723B667F5004C1843 /* ParallaxExtension.swift in Sources */,
