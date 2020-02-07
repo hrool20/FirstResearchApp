@@ -55,7 +55,8 @@ class Example1TableViewController: UITableViewController {
     array.append(contentsOf: [
       "TableView without TableViewController",
       "Segment Control with TableViewController",
-      "Segment Control with TableView (inside a ViewController)"
+      "Segment Control with TableView (inside a ViewController)",
+      "Segment Control with CollectionView"
     ])
     for i in 0..<20 {
       array.append("Title \(i + 1)")
@@ -125,6 +126,8 @@ class Example1TableViewController: UITableViewController {
       performSegue(withIdentifier: "showSegmentedControlWithTableViewController", sender: nil)
     case 2:
       performSegue(withIdentifier: "showSegmentedControlWithTableView", sender: nil)
+    case 3:
+      performSegue(withIdentifier: "showSegmentedControlWithCollectionView", sender: nil)
     default:
       break
     }

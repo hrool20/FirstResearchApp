@@ -88,7 +88,7 @@ extension SegmentedControlWithTableViewCollectionViewController: UICollectionVie
   }
 }
 extension SegmentedControlWithTableViewCollectionViewController: SecondSegmentedControlDelegate {
-  func didChangeTab(toIndex index: Int) {
+  func didChangeTab(toIndex index: Int, isPageShowed: Bool) {
     collectionView.reloadData()
   }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SecondSegmentedControlDelegate: class {
-  func didChangeTab(toIndex index: Int)
+  func didChangeTab(toIndex index: Int, isPageShowed: Bool)
 }
 
 class SecondSegmentedControl: UICollectionReusableView {
@@ -96,7 +96,7 @@ class SecondSegmentedControl: UICollectionReusableView {
       button.setTitleColor(textColor, for: .normal)
       if button == sender {
         selectorViewPosition = selectorViewWidthConstraint.constant * CGFloat(index)
-        delegate?.didChangeTab(toIndex: index)
+        delegate?.didChangeTab(toIndex: index, isPageShowed: false)
         _selectedIndex = index
       }
     }
@@ -114,6 +114,36 @@ class SecondSegmentedControl: UICollectionReusableView {
     }
     self.animated = animated
     showTabContent(sender: buttons[index])
+  }
+  
+  public func moveTabContent(scrollView: UIScrollView, didEndDecelerating: Bool = false) {
+    let page = scrollView.currentPage
+    let progress = scrollView.currentProgress
+    
+    if progress > 0.0 && progress < CGFloat(tabs.count - 1) {
+      let selectorViewPosition = selectorViewWidthConstraint.constant * progress
+      self.selectorViewToSuperviewLeadingConstraint.constant = selectorViewPosition
+    } else {
+      let selectorViewPosition: CGFloat
+      if progress <= 0 {
+        selectorViewPosition = selectorViewWidthConstraint.constant * progress * 3
+      } else {
+        selectorViewPosition = selectorViewWidthConstraint.constant + selectorViewWidthConstraint.constant * (progress - 1) * 3
+      }
+      self.selectorViewToSuperviewLeadingConstraint.constant = selectorViewPosition
+    }
+    
+    guard page != _selectedIndex && didEndDecelerating else {
+      return
+    }
+    for (index, button) in buttons.enumerated() {
+      button.setTitleColor(textColor, for: .normal)
+      if button == buttons[page] {
+        delegate?.didChangeTab(toIndex: index, isPageShowed: true)
+        _selectedIndex = index
+        self.buttons[page].setTitleColor(self.selectedTextColor, for: .normal)
+      }
+    }
   }
   
     /*

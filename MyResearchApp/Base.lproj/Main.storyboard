@@ -37,6 +37,7 @@
                         <segue destination="h6d-fz-H51" kind="show" identifier="showSecondTableView" id="svd-4g-zrN"/>
                         <segue destination="rU4-5y-nOG" kind="show" identifier="showSegmentedControlWithTableViewController" id="l6n-2K-2qZ"/>
                         <segue destination="34Z-oE-UbV" kind="show" identifier="showSegmentedControlWithTableView" id="vyF-Fe-Hec"/>
+                        <segue destination="6d6-kQ-eTL" kind="show" identifier="showSegmentedControlWithCollectionView" id="hEK-hP-Jiv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibw-v1-whF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -72,17 +73,73 @@
             </objects>
             <point key="canvasLocation" x="1954" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Segmented Control With Collection View View Controller-->
         <scene sceneID="Ib8-IB-MV6">
             <objects>
-                <viewController id="6d6-kQ-eTL" sceneMemberID="viewController">
+                <viewController id="6d6-kQ-eTL" customClass="SegmentedControlWithCollectionViewViewController" customModule="MRA_With_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JXm-7A-XUk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmG-TG-8iO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NFa-fg-dah"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-Je-4gN">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sKv-1k-Sef">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="firstCell" id="Dyy-BB-G1d" customClass="SegmentedControlWithCollectionViewViewCell" customModule="MRA_With_Storyboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="snE-Kz-3xY">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhC-xE-9sB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                </scrollView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="DhC-xE-9sB" secondAttribute="trailing" id="BtT-QW-bnk"/>
+                                                <constraint firstItem="DhC-xE-9sB" firstAttribute="top" secondItem="snE-Kz-3xY" secondAttribute="top" id="S1L-2M-Cjs"/>
+                                                <constraint firstItem="DhC-xE-9sB" firstAttribute="leading" secondItem="snE-Kz-3xY" secondAttribute="leading" id="WcT-wn-TP8"/>
+                                                <constraint firstAttribute="bottom" secondItem="DhC-xE-9sB" secondAttribute="bottom" id="mnw-nr-loI"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="scrollView" destination="DhC-xE-9sB" id="L43-F9-xNM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ppK-Kx-vWf" firstAttribute="trailing" secondItem="OmG-TG-8iO" secondAttribute="trailing" id="5gL-bi-m9Z"/>
+                            <constraint firstItem="OmG-TG-8iO" firstAttribute="top" secondItem="ppK-Kx-vWf" secondAttribute="top" id="DJR-9M-wd3"/>
+                            <constraint firstItem="ppK-Kx-vWf" firstAttribute="trailing" secondItem="8cs-Je-4gN" secondAttribute="trailing" id="QRI-gs-t7b"/>
+                            <constraint firstItem="ppK-Kx-vWf" firstAttribute="bottom" secondItem="8cs-Je-4gN" secondAttribute="bottom" id="Spc-t9-pG6"/>
+                            <constraint firstItem="OmG-TG-8iO" firstAttribute="leading" secondItem="ppK-Kx-vWf" secondAttribute="leading" id="WNo-Sx-yuR"/>
+                            <constraint firstItem="8cs-Je-4gN" firstAttribute="leading" secondItem="ppK-Kx-vWf" secondAttribute="leading" id="WnV-a0-dpn"/>
+                            <constraint firstItem="8cs-Je-4gN" firstAttribute="top" secondItem="OmG-TG-8iO" secondAttribute="bottom" id="zPb-63-ZK0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ppK-Kx-vWf"/>
                     </view>
                     <navigationItem key="navigationItem" id="EA1-3a-3M6"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8cs-Je-4gN" id="EK3-Zi-X8E"/>
+                        <outlet property="tabsView" destination="OmG-TG-8iO" id="nSq-0m-UtY"/>
+                        <outlet property="tabsViewHeightContraint" destination="NFa-fg-dah" id="aHq-7G-Vzg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVl-yy-ewm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

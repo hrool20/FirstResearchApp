@@ -29,6 +29,9 @@
 		915F49F723B667F5004C1843 /* ParallaxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F49F623B667F5004C1843 /* ParallaxExtension.swift */; };
 		917D0F0B23AD334F00769A03 /* VCWithTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */; };
 		918BF24C23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BF24B23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift */; };
+		91CA338C23EC7159001411C5 /* SegmentedControlWithCollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA338B23EC7159001411C5 /* SegmentedControlWithCollectionViewViewController.swift */; };
+		91CA338E23EC7926001411C5 /* SegmentedControlWithCollectionViewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA338D23EC7926001411C5 /* SegmentedControlWithCollectionViewViewCell.swift */; };
+		91CA339023ECB2CC001411C5 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA338F23ECB2CC001411C5 /* UIScrollViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		915F49F623B667F5004C1843 /* ParallaxExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxExtension.swift; sourceTree = "<group>"; };
 		917D0F0A23AD334F00769A03 /* VCWithTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithTableViewController.swift; sourceTree = "<group>"; };
 		918BF24B23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlWithTableViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		91CA338B23EC7159001411C5 /* SegmentedControlWithCollectionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlWithCollectionViewViewController.swift; sourceTree = "<group>"; };
+		91CA338D23EC7926001411C5 /* SegmentedControlWithCollectionViewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlWithCollectionViewViewCell.swift; sourceTree = "<group>"; };
+		91CA338F23ECB2CC001411C5 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,8 @@
 				9141A3D023BA520800526C26 /* SegmentedControlWithTableViewController.swift */,
 				912E0E6C23BE9F3E00AAD413 /* SegmentedControlWithTableViewCollectionViewController.swift */,
 				918BF24B23EB0DEA0069DA75 /* SegmentedControlWithTableViewCollectionViewCell.swift */,
+				91CA338B23EC7159001411C5 /* SegmentedControlWithCollectionViewViewController.swift */,
+				91CA338D23EC7926001411C5 /* SegmentedControlWithCollectionViewViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 			children = (
 				9102C0BB23ABCBB100188736 /* UIVIewExtension.swift */,
 				915F49F623B667F5004C1843 /* ParallaxExtension.swift */,
+				91CA338F23ECB2CC001411C5 /* UIScrollViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -340,7 +349,10 @@
 				915F49F723B667F5004C1843 /* ParallaxExtension.swift in Sources */,
 				9141A3CF23BA49E100526C26 /* FirstSegmentedControl.swift in Sources */,
 				9101C37223AA8246006E8DAA /* AppDelegate.swift in Sources */,
+				91CA339023ECB2CC001411C5 /* UIScrollViewExtension.swift in Sources */,
+				91CA338E23EC7926001411C5 /* SegmentedControlWithCollectionViewViewCell.swift in Sources */,
 				9101C37C23AA8246006E8DAA /* MyResearchApp.xcdatamodeld in Sources */,
+				91CA338C23EC7159001411C5 /* SegmentedControlWithCollectionViewViewController.swift in Sources */,
 				9101C37423AA8246006E8DAA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
