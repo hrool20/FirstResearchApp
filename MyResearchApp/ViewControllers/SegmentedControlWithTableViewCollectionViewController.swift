@@ -83,7 +83,6 @@ extension SegmentedControlWithTableViewCollectionViewController: UICollectionVie
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    print(CGSize(width: UIScreen.main.bounds.width, height: collectionView.bounds.height - self.navigationController!.navigationBar.bounds.height - secondSegmentedControl.bounds.height))
     return CGSize(width: UIScreen.main.bounds.width, height: collectionView.bounds.height - self.navigationController!.navigationBar.bounds.height - secondSegmentedControl.bounds.height)
   }
 }

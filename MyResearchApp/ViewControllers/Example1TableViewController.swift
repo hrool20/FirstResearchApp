@@ -32,13 +32,17 @@ class Example1TableViewController: UITableViewController {
     
     array = []
     imageHeight = 300
+    guard let statusBarSize = UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.size,
+      let navigationBarSize = navigationController?.navigationBar.bounds.size else {
+        fatalError("Sizes should not be empty")
+    }
     
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
     navigationController?.navigationBar.isTranslucent = true
     updateBarTitleAlpha(with: 0)
     
-    secondNavigationBar = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64))
+    secondNavigationBar = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: statusBarSize.height + navigationBarSize.height))
     secondNavigationBar.backgroundColor = .systemBackground
     secondNavigationBar.isHidden = true
     view.addSubview(secondNavigationBar)
@@ -61,12 +65,27 @@ class Example1TableViewController: UITableViewController {
     for i in 0..<20 {
       array.append("Title \(i + 1)")
     }
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(didOrientationChange), name: UIDevice.orientationDidChangeNotification, object: nil)
   }
   
-  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    super.viewWillTransition(to: size, with: coordinator)
-    
-    secondNavigationBar.frame.size = CGSize(width: UIScreen.main.bounds.width, height: (UIDevice.current.orientation == .portrait) ? 64.0 : 32.0)
+  deinit {
+    NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+  }
+  
+  @objc func didOrientationChange() {
+    guard let statusBarSize = UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.size,
+      let navigationBarSize = navigationController?.navigationBar.bounds.size else {
+        fatalError("Sizes should not be empty")
+    }
+    guard secondNavigationBar.bounds.width != navigationBarSize.width else {
+      return
+    }
+    print("##StatusBarSize: \(statusBarSize)")
+    print("##NavigationBarSize: \(navigationBarSize)")
+    DispatchQueue.main.async {
+      self.secondNavigationBar.frame.size = CGSize(width: navigationBarSize.width, height: navigationBarSize.height + statusBarSize.height)
+    }
   }
   
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -77,12 +96,6 @@ class Example1TableViewController: UITableViewController {
     secondNavigationBar.frame = CGRect(origin: CGPoint(x: 0, y: scrollView.contentOffset.y), size: secondNavigationBar.bounds.size)
     
     setupNavigationBar(headerHeight: headerHeight)
-  }
-  
-  func updateBarTitleAlpha(with alpha: CGFloat) {
-    navigationController?.navigationBar.titleTextAttributes = [
-      .foregroundColor: UIColor.label.withAlphaComponent(alpha)
-    ]
   }
   
   func setupNavigationBar(headerHeight: CGFloat) {
@@ -98,6 +111,12 @@ class Example1TableViewController: UITableViewController {
       secondNavigationBar.alpha = 0
       updateBarTitleAlpha(with: 0)
     }
+  }
+  
+  func updateBarTitleAlpha(with alpha: CGFloat) {
+    navigationController?.navigationBar.titleTextAttributes = [
+      .foregroundColor: UIColor.label.withAlphaComponent(alpha)
+    ]
   }
   
   // MARK: - Table view data source
